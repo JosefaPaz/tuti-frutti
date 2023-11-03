@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= link_to 'Dashboard', dashboard_path %>
-    <%= link_to 'Employees', employees_path %>
     <% if current_user %>
-      bienvenido <%= current_user.first_name %>
+      <div class='welcome'>
+        bienvenido <%= current_user.first_name %>
+      </div>
     <% end %>
     <%= yield %>
   </body>
